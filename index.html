@@ -348,15 +348,16 @@
 <h2 class="section-title">Get In Touch</h2>
 
 <div class="contact__container bd-grid">
-    <form action="" class="contact__form">
+    <form action="" class="contact__form" id="form">
     <div class="contact__inputs">
-<input type="text" placeholder="Name" class="contact__input">
-<input type="mail" placeholder="Email" class="contact__input">  
+<input type="text" placeholder="Name" class="contact__input" id="name" name="name">
+
+<input type="mail" placeholder="Email" class="contact__input" id="email" name="email">  
       </div>  
       <input type="text" placeholder="project" class="contact__input">
 
-      <textarea name="" id="" cols="0" rows="10" placeholder="message" class="contact__input"></textarea>
-      <input type="submit" value="send message" class="button contact__button"
+      <textarea name="" id="" cols="0" rows="10" placeholder="message" class="contact__input"></textarea id="message" name="message">
+      <input type="submit" value="send message" class="button contact__button"  id="submit-btn"/>
     </form> 
     <div>
     <div class="contact__info">
@@ -396,8 +397,16 @@
     </div>
 </footer>
 
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('f1qTRt3KiDbkq2RqT')
+</script>
+   
 
     <script src="index.js"></script>
+    <script src="contact.js"></script>
 </body>
 
 </html>
